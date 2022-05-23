@@ -33,6 +33,7 @@ public class LoginMain : MonoBehaviour
 
     public void LoginEmail()
     {
+        
         PlayFabClientAPI.LoginWithEmailAddress(new LoginWithEmailAddressRequest()
         {
             Email = _usernameAndEmailLogin.text,
@@ -55,6 +56,7 @@ public class LoginMain : MonoBehaviour
 
     public void LoginUsername()
     {
+        
         PlayFabClientAPI.LoginWithPlayFab(new LoginWithPlayFabRequest()
         {
             Username = _usernameAndEmailLogin.text,
@@ -105,7 +107,7 @@ public class LoginMain : MonoBehaviour
         {
             Debug.Log("Kayit Basarisiz");
             _animator.Play("Fail");
-        }); ;
+        }); 
         Debug.Log("bbbbb");
 
     }
@@ -116,7 +118,7 @@ public class LoginMain : MonoBehaviour
 
 
         PlayerPrefs.SetString("emailOrUsername", _usernameAndEmailLogin.text);
-        PlayerPrefs.SetString("passowrd", _passwordLogin.text);
+        PlayerPrefs.SetString("passoword", _passwordLogin.text);
 
 
         //PlayFabClientAPI.LoginWithAndroidDeviceID(new LoginWithAndroidDeviceIDRequest()
